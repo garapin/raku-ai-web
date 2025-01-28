@@ -53,8 +53,14 @@
     </script>
     <script>
         function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
             gtag('event', 'conversion', {
-                'send_to': 'AW-16840132455/P-CsCN7x9ZEYEIP-_6Aq'
+                'send_to': 'AW-16840132455/P-CsCN7x9ZEYEIP-_6Aq',
+                'event_callback': callback
             });
             return false;
         }
@@ -62,7 +68,6 @@
     <script>
         function confirmWhatsApp() {
             if (confirm('You will be redirected to WhatsApp to chat with RAKU AI. Click OK to continue.')) {
-                gtag_report_conversion();
                 window.open('https://wa.me/628119891977', '_blank');
             }
         }
