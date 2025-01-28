@@ -6,14 +6,23 @@
             <span class="visually-hidden">Loading...</span>
         </div>
         <h2 class="mb-4" style="font-weight: 300;">Redirecting to WhatsApp...</h2>
-        <p style="font-weight: 200; opacity: 0.8;">You will be redirected to chat with RAKU AI in a moment.</p>
+        <p style="font-weight: 200; opacity: 0.8;">You will be redirected to chat with RAKU AI in <span id="countdown">5</span> seconds.</p>
     </div>
 </main>
 
 <script>
-    setTimeout(function() {
-        window.location.href = 'https://wa.me/628119891977';
-    }, 1500); // Reduced to 1.5 seconds to ensure tracking completes
+    var timeLeft = 5;
+    var countdownEl = document.getElementById('countdown');
+    
+    var countdownTimer = setInterval(function() {
+        timeLeft--;
+        countdownEl.textContent = timeLeft;
+        
+        if (timeLeft <= 0) {
+            clearInterval(countdownTimer);
+            window.location.href = 'https://wa.me/628119891977';
+        }
+    }, 1000);
 </script>
 
 <%- include('partials/footer') %> 
