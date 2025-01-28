@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<main style="height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+    <div class="text-center">
+        <div class="spinner-border text-primary mb-4" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <h2 class="mb-4" style="font-weight: 300;">Redirecting to WhatsApp...</h2>
+        <p style="font-weight: 200; opacity: 0.8;">You will be redirected to chat with RAKU AI in a moment.</p>
+    </div>
+</main>
+
+<script>
+    setTimeout(function() {
+        window.location.href = 'https://wa.me/628119891977';
+    }, 2000); // Wait for 2 seconds before redirecting
+</script>
+
+<%- include('partials/footer') %> 

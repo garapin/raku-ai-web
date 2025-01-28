@@ -32,6 +32,13 @@ app.get('/terms-conditions', (req, res) => {
   });
 });
 
+// WhatsApp Redirect
+app.get('/redirect-whatsapp', (req, res) => {
+  res.render('redirect', {
+    title: 'Redirecting to WhatsApp - RAKU AI'
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 }); 
