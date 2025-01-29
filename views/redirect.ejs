@@ -1,18 +1,17 @@
 <%- include('partials/header') %>
 
-<main style="height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
-    <div class="text-center">
-        <div class="spinner-border text-primary mb-4" role="status" style="width: 3rem; height: 3rem;">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-        <h2 class="mb-4" style="font-weight: 300;">Redirecting to WhatsApp...</h2>
-        <p style="font-weight: 200; opacity: 0.8;">You will be redirected to chat with RAKU AI in <span id="countdown">2</span> seconds.</p>
+<main style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f8f9fa;">
+    <div class="text-center py-4 px-4" style="background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; max-width: 500px;">
+        <img src="/images/RAKU-AI-2.png" alt="RAKU AI" style="height: 40px; margin-bottom: 1.5rem;">
+        <h2 style="font-weight: 300; margin-bottom: 1rem;">Chat with RAKU AI</h2>
+        <p style="font-weight: 200; opacity: 0.8; margin-bottom: 2rem;">You're about to start a conversation with RAKU AI on WhatsApp</p>
+        <button onclick="openWhatsApp()" class="btn btn-success btn-lg" style="padding: 0.8rem 2rem; font-weight: 500;">
+            Open WhatsApp
+        </button>
     </div>
 </main>
 
 <script>
-    var timeLeft = 2;
-    var countdownEl = document.getElementById('countdown');
     var whatsappUrl = 'https://wa.me/628119891977';
     
     // If there's a message, append it to the URL
@@ -20,15 +19,9 @@
         whatsappUrl += '?text=' + encodeURIComponent('<%= message %>');
     <% } %>
     
-    var countdownTimer = setInterval(function() {
-        timeLeft--;
-        countdownEl.textContent = timeLeft;
-        
-        if (timeLeft <= 0) {
-            clearInterval(countdownTimer);
-            window.location.href = whatsappUrl;
-        }
-    }, 1000);
+    function openWhatsApp() {
+        window.location.href = whatsappUrl;
+    }
 </script>
 
 <%- include('partials/footer') %> 
