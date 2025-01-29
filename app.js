@@ -39,6 +39,15 @@ app.get('/redirect-whatsapp', (req, res) => {
   });
 });
 
+// Dynamic Text Message Redirect
+app.get('/text/:message', (req, res) => {
+  const message = req.params.message.replace(/_/g, ' '); // Replace underscores with spaces
+  res.render('redirect', {
+    title: 'Redirecting to WhatsApp - RAKU AI',
+    message: message
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 }); 

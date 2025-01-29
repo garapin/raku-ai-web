@@ -6,13 +6,19 @@
             <span class="visually-hidden">Loading...</span>
         </div>
         <h2 class="mb-4" style="font-weight: 300;">Redirecting to WhatsApp...</h2>
-        <p style="font-weight: 200; opacity: 0.8;">You will be redirected to chat with RAKU AI in <span id="countdown">5</span> seconds.</p>
+        <p style="font-weight: 200; opacity: 0.8;">You will be redirected to chat with RAKU AI in <span id="countdown">2</span> seconds.</p>
     </div>
 </main>
 
 <script>
-    var timeLeft = 5;
+    var timeLeft = 2;
     var countdownEl = document.getElementById('countdown');
+    var whatsappUrl = 'https://wa.me/628119891977';
+    
+    // If there's a message, append it to the URL
+    <% if (typeof message !== 'undefined') { %>
+        whatsappUrl += '?text=' + encodeURIComponent('<%= message %>');
+    <% } %>
     
     var countdownTimer = setInterval(function() {
         timeLeft--;
@@ -20,7 +26,7 @@
         
         if (timeLeft <= 0) {
             clearInterval(countdownTimer);
-            window.location.href = 'https://wa.me/628119891977';
+            window.location.href = whatsappUrl;
         }
     }, 1000);
 </script>
