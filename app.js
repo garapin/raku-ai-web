@@ -18,6 +18,13 @@ app.get('/', (req, res) => {
   });
 });
 
+// How User Use Raku
+app.get('/how-to-use', (req, res) => {
+  res.render('how-to-use', {
+    title: 'How User Use Raku - RAKU AI'
+  });
+});
+
 // Privacy Policy
 app.get('/privacy-policy', (req, res) => {
   res.render('privacy-policy', {
