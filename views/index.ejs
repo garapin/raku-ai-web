@@ -281,91 +281,77 @@
     <section id="why-raku" class="py-5" style="padding: 5rem 0; overflow-x: hidden; background-color: #ffffff;">
         <div class="container px-4">
             <h2 class="text-center mb-5" style="font-size: 2.5rem;">Why Raku</h2>
-            <div class="row g-4">
-                <!-- Cost -->
-                <div class="col-12 mb-4">
-                    <div class="comparison-card p-4 bg-light rounded shadow-sm">
-                        <h3 class="text-center mb-4" style="font-size: 1.5rem; font-weight: 600; opacity: 0.8;">Cost</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-end" style="font-size: 1.2rem; color: #011168;">Raku AI</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: right;">Flexible Pay, No monthly fees, No integration fees, No Server fees, No service fees, No AI fees, No minimum pay.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-start" style="font-size: 1.2rem; color: #6c757d;">Competitor</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: left;">Monthly Fees, Integration fees, service fees and/or minimum fees.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Target Number -->
-                <div class="col-12 mb-4">
-                    <div class="comparison-card p-4 bg-light rounded shadow-sm">
-                        <h3 class="text-center mb-4" style="font-size: 1.5rem; font-weight: 600; opacity: 0.8;">Target Number</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-end" style="font-size: 1.2rem; color: #011168;">Raku AI</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: right;">Pay as you sent, No minimum target number.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-start" style="font-size: 1.2rem; color: #6c757d;">Competitor</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: left;">Minimum target number impacted to monthly fees.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Features -->
-                <div class="col-12 mb-4">
-                    <div class="comparison-card p-4 bg-light rounded shadow-sm">
-                        <h3 class="text-center mb-4" style="font-size: 1.5rem; font-weight: 600; opacity: 0.8;">Features: Receipt, Marketing & Promotion, Product & Services, Order & Reservation</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-end" style="font-size: 1.2rem; color: #011168;">Raku AI</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: right;">Interactive</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-start" style="font-size: 1.2rem; color: #6c757d;">Competitor</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: left;">One-way direct message</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CRM Implementation -->
-                <div class="col-12 mb-4">
-                    <div class="comparison-card p-4 bg-light rounded shadow-sm">
-                        <h3 class="text-center mb-4" style="font-size: 1.5rem; font-weight: 600; opacity: 0.8;">CRM Implementation</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-end" style="font-size: 1.2rem; color: #011168;">Raku AI</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: right;">Minimum-to-none CS users, easy to implement for any system.</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-start" style="font-size: 1.2rem; color: #6c757d;">Competitor</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: left;">Need CS users in implementing CRM. Hard to integrate with current system, and Hard to get approval from Meta.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Implementation -->
-                <div class="col-12">
-                    <div class="comparison-card p-4 bg-light rounded shadow-sm">
-                        <h3 class="text-center mb-4" style="font-size: 1.5rem; font-weight: 600; opacity: 0.8;">AI Implementation</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-end" style="font-size: 1.2rem; color: #011168;">Raku AI</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: right;">AI capability by the core</p>
-                            </div>
-                            <div class="col-md-6">
-                                <h4 class="mb-3 text-start" style="font-size: 1.2rem; color: #6c757d;">Competitor</h4>
-                                <p style="font-weight: 200; line-height: 1.6; opacity: 0.8; text-align: left;">AI is another features to implement, need to add cost for new features.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="table-responsive">
+                <table class="table table-bordered comparison-table">
+                    <thead class="bg-light">
+                        <tr>
+                            <th style="width: 30%;" class="text-center align-middle">Objectives</th>
+                            <th style="width: 35%; background-color: #01b5ff; color: white;" class="text-center align-middle">
+                                <h4 style="font-size: 1.2rem; color: white; margin-bottom: 0;">Raku AI</h4>
+                            </th>
+                            <th style="width: 35%;" class="text-center align-middle">
+                                <h4 style="font-size: 1.2rem; color: #6c757d; margin-bottom: 0;">Competitor</h4>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cost -->
+                        <tr>
+                            <td class="fw-bold align-middle bg-light">Cost</td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px; background-color: #01b5ff; color: white;">
+                                Flexible Pay, No monthly fees, No integration fees, No Server fees, No service fees, No AI fees.
+                            </td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px;">
+                                Monthly Fees, Integration fees, service fees and/or minimum fees.
+                            </td>
+                        </tr>
+                        
+                        <!-- Target Number -->
+                        <tr>
+                            <td class="fw-bold align-middle bg-light">Target Number</td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px; background-color: #01b5ff; color: white;">
+                                Pay as you sent, No minimum target number.
+                            </td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px;">
+                                Minimum target number impacted to monthly fees.
+                            </td>
+                        </tr>
+                        
+                        <!-- Features -->
+                        <tr>
+                            <td class="fw-bold align-middle bg-light">Features: Receipt, Marketing & Promotion, Product & Services, Order & Reservation</td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px; background-color: #01b5ff; color: white;">
+                                Interactive
+                            </td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px;">
+                                One-way direct message
+                            </td>
+                        </tr>
+                        
+                        <!-- CRM Implementation -->
+                        <tr>
+                            <td class="fw-bold align-middle bg-light">CRM Implementation</td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px; background-color: #01b5ff; color: white;">
+                                Minimum-to-none CS users, easy to implement for any system.
+                            </td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px;">
+                                Need CS users in implementing CRM. Hard to integrate with current system, and Hard to get approval from Meta.
+                            </td>
+                        </tr>
+                        
+                        <!-- AI Implementation -->
+                        <tr>
+                            <td class="fw-bold align-middle bg-light">AI Implementation</td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px; background-color: #01b5ff; color: white;">
+                                AI capability by the core
+                            </td>
+                            <td style="font-weight: 200; line-height: 1.6; opacity: 0.8; padding: 16px;">
+                                AI is another features to implement, need to add cost for new features.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
